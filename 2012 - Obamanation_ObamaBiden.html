@@ -28455,7 +28455,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 8922,
             "candidate": 77,
-            "answer_feedback": "Sebelius proves an inoffensive choice. 24/7 cable news stations speculate whether she'll help the Obama healthcare plan get passed, but if you think picking a red stater would appeal to conservatives guess again, Drudge Report calls her the token country bumpkin for the new elitist administration."
+            "answer_feedback": "Sebelius proves an inoffensive choice. 24/7 cable news stations speculate whether she'll help the Obama healthcare plan get passed, but if you think picking a red stater would appeal to conservatives guess again, Drudge Report calls her the “token country bumpkin“ for the new elitist administration."
         }
     },
     {
@@ -33763,8 +33763,8 @@ const ads = [
 
 	e = campaignTrail_temp
 
-	campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/NtnNbDH.png';
-	campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/APmu025.png';
+	campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/5WhyIQ6.png';
+	campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/oIoUxiw.png';
 	campaignTrail_temp.candidate_last_name = ' ';
 	campaignTrail_temp.running_mate_last_name = ' ';
 	campaignTrail_temp.running_mate_state_id = '469';
@@ -34229,8 +34229,8 @@ const ads = [
     }
     function switcheroo9() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(80)
-        e.candidate_json[id].fields.first_name = "Bill"
-        e.candidate_json[id].fields.last_name = "Weld"
+        e.candidate_json[id].fields.first_name = "Wayne"
+        e.candidate_json[id].fields.last_name = "Root"
         campaignTrail_temp.candidate_json[id].fields.color_hex = "#c0db51"
         var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(849);
         campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.044;
@@ -36326,7 +36326,7 @@ const ads = [
 			}
 		}
 			   
-		//1 == Rice, 26 == Huntsman, 2 == Bloomberg, 22 = Romney, 25 == Trump, 5 == Gingrich, 24 == Arpaio, 21 == Bachmann, 20 = Paul, 6 == Cheney, 7 == Christie, 4 == Petraeus, 3 == McChrystal
+		//1 == Rice, 26 == Huntsman, 2 == Bloomberg, 22 = Romney, 25 == Trump, 5 == Gingrich, 24 == Arpaio, 21 == Bachmann, 20 = Paul, 6 == Cheney, 7 == “, 4 == Petraeus, 3 == McChrystal
 		if(e.noCounter == 32){
             let index = menuItemsA.findIndex(item => item.id === 'RICE_A');
             if(Rep != 1){
@@ -36429,7 +36429,7 @@ const ads = [
 		refreshSurrogates()    
 	}
 
-let vpName = "ERROR YOU DIDN'T SET ME";
+let vpName = "KILL YOURSELF";
 
 vpTable = {
     "Barack Obama" : vpName,
@@ -36441,27 +36441,32 @@ vpTable = {
     "Michael Bloomberg": "Charlie Crist",
     "Mitt Romney" : "Kay Bailey Hutchison",
     "Newt Gingrich" : "Rick Santorum",
-    "David Petraeus" : "John Kasich",
-    "Donald Trump" : "Lou Barletta",
+    "David Petraeus" : "Condoleezza Rice",
+    "Donald Trump" : "Mike Huckabee",
     "Michele Bachmann" : "Tom Tancredo",
     "Ron Paul" : "Herman Cain",
     "Joe Arpaio" : "Bobby Jindal",
     "Dick Cheney" : "Michael Steele",
+    "John McCain" : "Lindsey Graham",
+    "Sarah Palin" : "Jim DeMint",
+    "Arnold Schwarzenegger" : "Rudy Giuliani",
 	
 	
-	"Gary Johnson" : "Mark B. Madsen",
-	"Bill Weld" : "Andrew Napolitano",
+	"Gary Johnson" : "Jim Gray",
+	"Wayne Root" : "Andrew Napolitano",
 	"Glenn Beck" : "Virgil Goode",
 	"Jimmy McMillan" : "Vermin Supreme",
 	"Penn Jillette" : "Adam Carolla",
     "Curtis Sliwa" : "Rupert Boneham",
+    "Michele Bachmann" : "Trent Franks",
 	
 	"Chelsea Manning" : "Cindy Sheehan",
     "Cenk Uygur" : "Matt Taibbi",
     "Chris Matthews" : "Alan Greenspan",
     "Roseanne Barr" : "Cynthia Nixon",
     "Dennis Kucinich" : "Steve Kubby",
-    "Joe Lieberman" : "Lincoln Chafee",
+    "Joe Lieberman" : "Erskine Bowles",
+    "Michael Bloomberg" : "David Boren",
     "Bernie Sanders" : "Cornel West",
 
 }
@@ -36721,13 +36726,13 @@ function openSurrogates() {
         }
 		
 		if(e.player_answers.includes(8930)||e.player_answers.includes(8943)){
-		    overviewtxt += "• "+  `We've <i>passed</i> a <span style="color: #15A600;">1.1 trillion</span> stimulus plan` + "<br>";
+		    overviewtxt += "• "+  `We've <i>passed</i> a <span style="color: #15A600;">$1.1 trillion</span> stimulus plan` + "<br>";
 		}
 		if(e.player_answers.includes(8931)||e.player_answers.includes(8934)||e.player_answers.includes(8944)){
-		    overviewtxt += "• "+  `We've <i>passed</i> a <span style="color: #98D937;">780 billion</span> stimulus plan` + "<br>";
+		    overviewtxt += "• "+  `We've <i>passed</i> a <span style="color: #98D937;">$780 billion</span> stimulus plan` + "<br>";
 		}
 		if(e.player_answers.includes(8932)){
-		    overviewtxt += "• "+  `We've <i>passed</i> a <span style="color: #FADC0E;">450 billion</span> stimulus plan` + "<br>";
+		    overviewtxt += "• "+  `We've <i>passed</i> a <span style="color: #FADC0E;">$450 billion</span> stimulus plan` + "<br>";
 		}
 		
 		if(e.player_answers.includes(8994)){
