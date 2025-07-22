@@ -1,11 +1,11 @@
 function ctsAchievement(achievement, difficultyChecker = true){
-	if ((difficultyChecker && campaignTrail_temp.difficulty_level_multiplier<=1)||!difficultyChecker)
-		if(campaignTrail_temp.CTS){
+	if ((difficultyChecker && e.difficulty_level_multiplier<=1)||!difficultyChecker)
+		if(e.CTS){
 		unlockAchievement(achievement);
 	}
 }
 
-campaignTrail_temp.questions_json = [
+e.questions_json = [
     {
         "model": "campaign_trail.question",
         "pk": 8908,
@@ -1727,7 +1727,7 @@ campaignTrail_temp.questions_json = [
     }
 ]
 
-campaignTrail_temp.answers_json = [
+e.answers_json = [
     {
         "model": "campaign_trail.answer",
         "pk": 8907,
@@ -6402,7 +6402,7 @@ campaignTrail_temp.answers_json = [
     }
 ]
 
-campaignTrail_temp.states_json = [
+e.states_json = [
     {
         "model": "campaign_trail.state",
         "pk": 181,
@@ -7068,7 +7068,7 @@ campaignTrail_temp.states_json = [
     }
 ]
 
-campaignTrail_temp.issues_json = [
+e.issues_json = [
     {
         "model": "campaign_trail.issue",
         "pk": 27,
@@ -7186,7 +7186,7 @@ campaignTrail_temp.issues_json = [
     }
 ]
 
-campaignTrail_temp.state_issue_score_json = [
+e.state_issue_score_json = [
     {
         "model": "campaign_trail.state_issue_score",
         "pk": 868,
@@ -9739,7 +9739,7 @@ campaignTrail_temp.state_issue_score_json = [
     }
 ]
 
-campaignTrail_temp.candidate_issue_score_json = [
+e.candidate_issue_score_json = [
     {
         "model": "campaign_trail.candidate_issue_score",
         "pk": 258,
@@ -9922,7 +9922,7 @@ campaignTrail_temp.candidate_issue_score_json = [
     }
 ]
 
-campaignTrail_temp.running_mate_issue_score_json = [
+e.running_mate_issue_score_json = [
     {
         "model": "campaign_trail.candidate_issue_score",
         "pk": 278,
@@ -9970,7 +9970,7 @@ campaignTrail_temp.running_mate_issue_score_json = [
     }
 ]
 
-campaignTrail_temp.candidate_state_multiplier_json = [
+e.candidate_state_multiplier_json = [
     {
         "model": "campaign_trail.candidate_state_multiplier",
         "pk": 676,
@@ -11809,7 +11809,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
     }
 ]
 
-campaignTrail_temp.answer_score_global_json = [
+e.answer_score_global_json = [
     {
         "model": "campaign_trail.answer_score_global",
         "pk": 12810,
@@ -14782,7 +14782,7 @@ campaignTrail_temp.answer_score_global_json = [
     }
 ]
 
-campaignTrail_temp.answer_score_issue_json = [
+e.answer_score_issue_json = [
     {
         "model": "campaign_trail.answer_score_issue",
         "pk": 8900,
@@ -25055,7 +25055,7 @@ campaignTrail_temp.answer_score_issue_json = [
     }
 ]
 
-campaignTrail_temp.answer_score_state_json = [
+e.answer_score_state_json = [
     {
         "model": "campaign_trail.answer_score_state",
         "pk": 12739,
@@ -28403,7 +28403,7 @@ campaignTrail_temp.answer_score_state_json = [
     }
 ]
 
-campaignTrail_temp.answer_feedback_json = [
+e.answer_feedback_json = [
     {
         "model": "campaign_trail.answer_feedback",
         "pk": 8909,
@@ -33662,7 +33662,7 @@ campaignTrail_temp.answer_feedback_json = [
     }
 ]
 
-campaignTrail_temp.jet_data = [{}
+e.jet_data = [{}
 ]
 let newAd = true;
 
@@ -33761,17 +33761,17 @@ const ads = [
 	var songChange = 0;
     e.noCounter = 0
 
-	e = campaignTrail_temp
+	e = e
 
-	campaignTrail_temp.candidate_image_url = 'https://i.imgur.com/kbhykyE.png';
-	campaignTrail_temp.running_mate_image_url = 'https://i.imgur.com/Nbpsnb7.png';
-	campaignTrail_temp.candidate_last_name = ' ';
-	campaignTrail_temp.running_mate_last_name = ' ';
-	campaignTrail_temp.running_mate_state_id = '469';
-	campaignTrail_temp.player_answers = [];
-	campaignTrail_temp.player_visits = [];
-	campaignTrail_temp.answer_feedback_flg = 1;
-	campaignTrail_temp.game_start_logging_id = '3662479';
+	e.candidate_image_url = 'https://i.imgur.com/kbhykyE.png';
+	e.running_mate_image_url = 'https://i.imgur.com/Nbpsnb7.png';
+	e.candidate_last_name = ' ';
+	e.running_mate_last_name = ' ';
+	e.running_mate_state_id = '469';
+	e.player_answers = [];
+	e.player_visits = [];
+	e.answer_feedback_flg = 1;
+	e.game_start_logging_id = '3662479';
     const customStyling = document.createElement("style");
         customStyling.innerHTML = `
         h4 {
@@ -33824,138 +33824,138 @@ const ads = [
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = 0.5
 
         //Va
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(772);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(772);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
         //Al
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(728);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(728);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
         //Nh
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(755);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.96;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(755);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.96;
         //In
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(740);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.35;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(740);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.35;
         //Tx
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.55;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.55;
         //Az
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.34;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.34;
     }
     function switcheroo2() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(78)
         e.candidate_json[id].fields.first_name = "Arnold"
         e.candidate_json[id].fields.last_name = "Schwarzenegger"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#7a3409"
+        e.candidate_json[id].fields.color_hex = "#7a3409"
 
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 27)[0].fields.issue_score = 0.1
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 31)[0].fields.issue_score = -0.1
 
         //In
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(740);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.25;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(740);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.25;
         //Ct
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(733);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(733);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
         //Tx
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.15;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.15;
         //Tx Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(871);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.12;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(871);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.12;
         //Ga
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(736);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.78;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(736);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.78;
         //Nd
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(760);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(760);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
         //Nm
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(757);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.8;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(757);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.8;
         //La
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(744);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.84;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(744);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.84;
         //Ms
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(750);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.89;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(750);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.89;
         //Ms Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(852);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.12;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(852);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.12;
         //Mt
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(752);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.8;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(752);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.8;
         //Mt Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(803);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.1;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(803);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.1;
         //Al
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(727);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.8;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(727);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.8;
         //Al Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(829);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.1;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(829);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.1;
         //Tn
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(768);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.85;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(768);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.85;
         //Mo
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(751);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.88;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(751);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.88;
         //Wy
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(777);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.70;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(777);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.70;
         //Id
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(738);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.66;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(738);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.66;
         //Wv
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(775);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.65;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(775);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.65;
         //Wv Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(877);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.08;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(877);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.08;
         //Nd
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(760);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.89;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(760);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.89;
         //Oh
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(761);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.87;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(761);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.87;
         //Nc
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(759);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.90;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(759);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.90;
         //Nc Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(861);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(861);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
         //La Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(846);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.08;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(846);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.08;
         //Ar Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(832);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(832);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
         //Io Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(843);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.03;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(843);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.03;
         //Mo Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(853);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(853);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
         //Ga Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(838);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.04;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(838);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.04;
         //Id Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(840);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(840);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
         //Wy Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(879);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.0475;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(879);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.0475;
         //In Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(842);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.063;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(842);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.063;
         //Ky Libertarian
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(845);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.01;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(845);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.01;
         //In
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(740);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.10;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(740);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.10;
         //Ky
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(743);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.99;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(743);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.99;
     }
     function switcheroo3() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(78)
@@ -33970,47 +33970,47 @@ const ads = [
         e.candidate_json[id].fields.color_hex = "#ab0a07" 
     }
     function switcheroo5() {
-        var id = campaignTrail_temp.candidate_json.map(p=>p.pk).indexOf(78)
-        campaignTrail_temp.candidate_json[id].fields.first_name = "Newt"
-        campaignTrail_temp.candidate_json[id].fields.last_name = "Gingrich"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#c2102a"
+        var id = e.candidate_json.map(p=>p.pk).indexOf(78)
+        e.candidate_json[id].fields.first_name = "Newt"
+        e.candidate_json[id].fields.last_name = "Gingrich"
+        e.candidate_json[id].fields.color_hex = "#c2102a"
 
         //Ny
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(758);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.70;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(758);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.70;
         //Ma
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(747);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.75;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(747);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.75;
         //Az
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.94;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.94;
         //Tx
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(747);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.75;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(747);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.75;
         //Ca
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(731);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.80;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(731);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.80;
         //Pa
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(764);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(764);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
         //Ct
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(733);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.82;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(733);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.82;
         //Wa
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(773);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.88;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(773);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.88;
         //Mo
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(751);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(751);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
         //Mn
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(749);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.80;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(749);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.80;
         //Io
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(741);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.80;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(741);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.80;
         //In
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(740);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(740);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
     }
     function switcheroo6() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(78)
@@ -34022,31 +34022,31 @@ const ads = [
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 30)[0].fields.issue_score = -0.9
     
         //Ak
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(728);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.82;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(728);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.82;
         //DC
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(774);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.15;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(774);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.15;
         //Wy
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(777);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(777);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
     }
     function switcheroo7() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(78)
         e.candidate_json[id].fields.first_name = "Chris"
         e.candidate_json[id].fields.last_name = "Christie"   
         e.candidate_json[id].fields.color_hex = "#590205"
-        var id = campaignTrail_temp.candidate_json.map(p=>p.pk).indexOf(77)
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#20788c"
+        var id = e.candidate_json.map(p=>p.pk).indexOf(77)
+        e.candidate_json[id].fields.color_hex = "#20788c"
 
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.35
         
         //Nj
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(756);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(756);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
         //Nh
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(755);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.93;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(755);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.93;
     }
     function switcheroo20() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(78)
@@ -34058,44 +34058,44 @@ const ads = [
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 31)[0].fields.issue_score = -0.9
     
         //Tx
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.25;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.25;
         //Az
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.82;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.82;
         //Sd
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(767);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.90;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(767);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.90;
         //Ks
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(742);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(742);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
         //Ne
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(753);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(753);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
         //Ny
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(758);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.68;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(758);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.68;
         //Ma
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(747);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.68;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(747);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.68;
         //Il
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(739);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.90;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(739);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.90;
         //Ha
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(737);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.75;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(737);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.75;
         //Nh
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(755);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(755);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
         //Co
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(732);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(732);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
         //Ca
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(731);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.78;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(731);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.78;
         //Nv
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(754);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.15;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(754);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.15;
     }
     function switcheroo21() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(78)
@@ -34107,32 +34107,32 @@ const ads = [
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 31)[0].fields.issue_score = -0.9
     
         //Ny
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(731);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.75;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(731);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.75;
         //Ca
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(758);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.65;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(758);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.65;
         //Ma
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(747);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.65;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(747);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.65;
         //Vt
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(771);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.65;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(771);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.65;
         //Ri
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(765);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.75;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(765);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.75;
         //Az
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.90;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.90;
         //Mo
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(751);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(751);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
         //Va
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(772);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.85;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(772);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.85;
         //Nc
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(759);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(759);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
     }
     function switcheroo22() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(78)
@@ -34140,8 +34140,8 @@ const ads = [
         e.candidate_json[id].fields.last_name = "Romney"      
 
         //Ut
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(770);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.25;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(770);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.25;
     }
     function switcheroo24() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(78)
@@ -34158,26 +34158,26 @@ const ads = [
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 29)[0].fields.issue_score = -0.4
 
         //Az
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.85;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.85;
         //Ga
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(736);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.80;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(736);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.80;
         //Tx
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.35;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.35;
         //Nm
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(757);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.83;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(757);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.83;
         //Pa
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(764);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(764);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
         //Va
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(772);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.82;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(772);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.82;
         //Mn Democratic
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(698);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(698);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
     }
     function switcheroo26() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(78)
@@ -34188,154 +34188,154 @@ const ads = [
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 78 && x.fields.issue == 28)[0].fields.issue_score = -0.3
 
         //Az
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.15;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(729);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.15;
         //Tx
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.40;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(769);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.40;
         //Al
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(727);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(727);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
         //Ms
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(750);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.93;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(750);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.93;
         //Or
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(763);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(763);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
         //Vi
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(772);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(772);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.05;
         //Nh
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(755);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(755);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
         //Ut
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(770);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 1.35;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(770);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 1.35;
         //Wv
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(775);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.85;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(775);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.85;
         //Wy
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(777);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(777);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.95;
     }
 	// 3rd party 
 	function switcheroo8() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.first_name = "Gary"
         e.candidate_json[id].fields.last_name = "Johnson"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#f2e57e"
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(859);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.085;
+        e.candidate_json[id].fields.color_hex = "#f2e57e"
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(859);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.085;
     }
     function switcheroo9() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.first_name = "Bill"
         e.candidate_json[id].fields.last_name = "Weld"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#c0db51"
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(849);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.044;
+        e.candidate_json[id].fields.color_hex = "#c0db51"
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(849);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.044;
     }
     function switcheroo10() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.first_name = "Glenn"
         e.candidate_json[id].fields.last_name = "Beck"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#e6cb05"
+        e.candidate_json[id].fields.color_hex = "#e6cb05"
 
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 28)[0].fields.issue_score = -0.8
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 80 && x.fields.issue == 31)[0].fields.issue_score = -0.9
 
         //Ut
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(872);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.3;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(872);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.3;
         //Wy
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(879);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.2;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(879);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.2;
         //Id
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(840);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.3;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(840);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.3;
         //Mt
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(854);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.1;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(854);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.1;
         //Ca
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(833);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(833);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
         //Wa
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(875);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.02;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(875);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.02;
         //Or
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(865);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.02;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(865);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.02;
         //Az
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(831);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.04;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(831);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.04;
         //Nv
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(856);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.08;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(856);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.08;
         //Al
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(829);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(829);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
         //Ms
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(852);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(852);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
         //Sd
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(869);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.085;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(869);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.085;
         //Ne
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(855);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.075;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(855);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.075;
         //Nd
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(862);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.085;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(862);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.085;
         //Co
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(834);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.03;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(834);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.03;
         //Wv
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(877);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.07;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(877);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.07;
         //Nc
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(861);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.04;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(861);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.04;
         //Il
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(841);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(841);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
         //Ar
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(832);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(832);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
     }
     function switcheroo11() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.first_name = "Jimmy"
         e.candidate_json[id].fields.last_name = "McMillan"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#547558"
+        e.candidate_json[id].fields.color_hex = "#547558"
 
         //Ca
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(833);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.003;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(833);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.003;
         //Ma
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(849);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.001;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(849);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.001;
     }
     function switcheroo12() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.first_name = "Penn"
         e.candidate_json[id].fields.last_name = "Jillette"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#ab076c"
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(856);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.4;
+        e.candidate_json[id].fields.color_hex = "#ab076c"
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(856);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.4;
     }
     function switcheroo27() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(80)
         e.candidate_json[id].fields.first_name = "Curtis"
         e.candidate_json[id].fields.last_name = "Sliwa"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#12db9f"
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(860);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.08;
+        e.candidate_json[id].fields.color_hex = "#12db9f"
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(860);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.08;
     }
     function switcheroo13() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(79)
         e.candidate_json[id].fields.first_name = "Chelsea"
         e.candidate_json[id].fields.last_name = "Manning"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#ed77b2"
+        e.candidate_json[id].fields.color_hex = "#ed77b2"
 
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 30)[0].fields.issue_score = 0.9
     }
@@ -34343,7 +34343,7 @@ const ads = [
         var id = e.candidate_json.map(p=>p.pk).indexOf(79)
         e.candidate_json[id].fields.first_name = "Cenk"
         e.candidate_json[id].fields.last_name = "Uygur"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#733614"
+        e.candidate_json[id].fields.color_hex = "#733614"
 
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 29)[0].fields.issue_score = 0.4
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 30)[0].fields.issue_score = 0.7
@@ -34352,39 +34352,39 @@ const ads = [
         var id = e.candidate_json.map(p=>p.pk).indexOf(79)
         e.candidate_json[id].fields.first_name = "Roseanne"
         e.candidate_json[id].fields.last_name = "Barr"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#069c1d"
+        e.candidate_json[id].fields.color_hex = "#069c1d"
 
         //Ma
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(798);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.005;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(798);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.005;
         //Ca
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(782);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.01;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(782);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.01;
     }
     function switcheroo16() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(79)
         e.candidate_json[id].fields.first_name = "Dennis"
         e.candidate_json[id].fields.last_name = "Kucinich"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#5d0a61"
+        e.candidate_json[id].fields.color_hex = "#5d0a61"
 
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 29)[0].fields.issue_score = 0.3
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 30)[0].fields.issue_score = 0.4
 
         //Ma
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(798);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.0045;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(798);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.0045;
         //Ca
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(782);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.009;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(782);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.009;
         //DC
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(825);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.009;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(825);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.009;
     }
     function switcheroo17() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(79)
         e.candidate_json[id].fields.first_name = "Bernie"
         e.candidate_json[id].fields.last_name = "Sanders"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#34d629"
+        e.candidate_json[id].fields.color_hex = "#34d629"
 
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 28)[0].fields.issue_score = 0.9
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 29)[0].fields.issue_score = 0.9
@@ -34392,89 +34392,89 @@ const ads = [
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 31)[0].fields.issue_score = 0.9
 
         //Ma
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(798);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.35;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(798);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.35;
         //Ak
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(779);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.2;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(779);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.2;
         //Ca
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(782);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.27;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(782);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.27;
         //DC
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(825);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.17;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(825);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.17;
         //NY
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(809);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.25;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(809);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.25;
         //VT
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(822);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.65;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(822);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.65;
         //Wa
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(824);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.11;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(824);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.11;
         //Rh
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(816);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.12;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(816);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.12;
         //Co
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(783);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(783);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.05;
         //Ct
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(784);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.015;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(784);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.015;
         //Oh
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(812);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.04;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(812);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.04;
         //Mn
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(800);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.15;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(800);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.15;
         //Il
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(790);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.08;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(790);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.08;
         //Pa
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(815);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.03;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(815);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.03;
         //Nj
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(807);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.03;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(807);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.03;
         //Mi
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(799);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.07;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(799);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.07;
         //Or
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(814);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.15;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(814);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.15;
         //Me
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(796);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.19;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(796);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.19;
         //Mt
-        var id = campaignTrail_temp.candidate_state_multiplier_json.map(p => p.pk).indexOf(803);
-        campaignTrail_temp.candidate_state_multiplier_json[id].fields.state_multiplier = 0.12;
+        var id = e.candidate_state_multiplier_json.map(p => p.pk).indexOf(803);
+        e.candidate_state_multiplier_json[id].fields.state_multiplier = 0.12;
     }
     function switcheroo18() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(79)
         e.candidate_json[id].fields.first_name = "Chris"
         e.candidate_json[id].fields.last_name = "Matthews"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#1aada8"
+        e.candidate_json[id].fields.color_hex = "#1aada8"
     }
     function switcheroo19() {
         var id = e.candidate_json.map(p=>p.pk).indexOf(79)
         e.candidate_json[id].fields.first_name = "Joe"
         e.candidate_json[id].fields.last_name = "Lieberman"
-        campaignTrail_temp.candidate_json[id].fields.color_hex = "#424242"
+        e.candidate_json[id].fields.color_hex = "#424242"
 
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 29)[0].fields.issue_score = -0.5
         e.candidate_issue_score_json.filter((x) => x.fields.candidate == 79 && x.fields.issue == 30)[0].fields.issue_score = -0.8
     }
 	cyoAdventure = function(a) {
-        ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length-1];
+        ans = e.player_answers[e.player_answers.length-1];
         e.noCounter += 1
 		
 		if(newAd) {
 		  newAd = false;
-		  campaignTrail_temp.banner1.src = getRandomItem(ads);
-		  campaignTrail_temp.banner1.parentNode.style.visibility = "visible";
+		  e.banner1.src = getRandomItem(ads);
+		  e.banner1.parentNode.style.visibility = "visible";
 
-		  campaignTrail_temp.banner2.src = getRandomItem(ads);
-		  campaignTrail_temp.banner2.parentNode.style.visibility = "visible";
+		  e.banner2.src = getRandomItem(ads);
+		  e.banner2.parentNode.style.visibility = "visible";
 		}
 		else {
 		  newAd = true;
@@ -35215,260 +35215,260 @@ const ads = [
         }
 		
         if((Daschle > 0) && (e.noCounter == 5)){
-            campaignTrail_temp.questions_json[5] = tunnel(7000);   
+            e.questions_json[5] = tunnel(7000);   
         }
 	else if((Cred > 1) && (Daschle == 0) && (e.noCounter == 5)){
-            campaignTrail_temp.questions_json[5] = tunnel(8912);   
+            e.questions_json[5] = tunnel(8912);   
         }
         else if((Cred < 2) && (Daschle == 0) && (e.noCounter == 5)){
-            campaignTrail_temp.questions_json[5] = tunnel(6969);   
+            e.questions_json[5] = tunnel(6969);   
         }
 
         if((Chauvinism == -1) && (Quidpro == 0) && (e.noCounter == 7)){
-            campaignTrail_temp.questions_json[7] = tunnel(6968);   
+            e.questions_json[7] = tunnel(6968);   
         }
         else if((Quidpro == 1) && (Chauvinism > -1) && (e.noCounter == 7)){
-            campaignTrail_temp.questions_json[7] = tunnel(8915);   
+            e.questions_json[7] = tunnel(8915);   
         }
         else if((Quidpro == 0) && (Chauvinism > -1) && (e.noCounter == 7)){
-            campaignTrail_temp.questions_json[7] = tunnel(6968);   
+            e.questions_json[7] = tunnel(6968);   
         }
         else if((Quidpro == 0) && (Chauvinism == -1) && (e.noCounter == 7)){
-            campaignTrail_temp.questions_json[7] = tunnel(6968);   
+            e.questions_json[7] = tunnel(6968);   
         }
         else if((Quidpro == 1) && (Chauvinism == -1) && (e.noCounter == 7)){
-            campaignTrail_temp.questions_json[7] = tunnel(6968);   
+            e.questions_json[7] = tunnel(6968);   
         }
 
         if((Socdem == 1) && (Cred == 1) && (e.noCounter == 8)){
-            campaignTrail_temp.questions_json[8] = tunnel(8916);   
+            e.questions_json[8] = tunnel(8916);   
         }
         else if((Socdem == 1) && (Cred <= 0) && (e.noCounter == 8)){
-            campaignTrail_temp.questions_json[8] = tunnel(6967);   
+            e.questions_json[8] = tunnel(6967);   
         }
         else if((Socdem == 1) && (Cred >= 2) && (e.noCounter == 8)){
-            campaignTrail_temp.questions_json[8] = tunnel(6966);   
+            e.questions_json[8] = tunnel(6966);   
         }
         else if((Neolib == 1) && (Cred == 1) && (e.noCounter == 8)){
-            campaignTrail_temp.questions_json[8] = tunnel(6929);   
+            e.questions_json[8] = tunnel(6929);   
         }
         else if((Neolib == 1) && (Cred <= 0) && (e.noCounter == 8)){
-            campaignTrail_temp.questions_json[8] = tunnel(6928);   
+            e.questions_json[8] = tunnel(6928);   
         }
         else if((Neolib == 1) && (Cred >= 2) && (e.noCounter == 8)){
-            campaignTrail_temp.questions_json[8] = tunnel(6927);   
+            e.questions_json[8] = tunnel(6927);   
         }
 
         if((Cred >= 2) && (e.noCounter == 10)){
-            campaignTrail_temp.questions_json[10] = tunnel(8919);   
+            e.questions_json[10] = tunnel(8919);   
         }
         else if((Cred < 2) && (e.noCounter == 10)){
-            campaignTrail_temp.questions_json[10] = tunnel(6964);   
+            e.questions_json[10] = tunnel(6964);   
         }
 
         if((Cred >= 3) && (Daschle == 1) && (Compromise == 1) && (Public == 0) && (e.noCounter == 13)){
-            campaignTrail_temp.questions_json[13] = tunnel(6963);   
+            e.questions_json[13] = tunnel(6963);   
         }
         else if((Cred == 4) && (Daschle == 1) && (Compromise == 1) && (Public == 0) && (e.noCounter == 13)){
-            campaignTrail_temp.questions_json[13] = tunnel(4000);   
+            e.questions_json[13] = tunnel(4000);   
         }
         else if((Cred < 3) && (Daschle == 0) && (Compromise == 1) && (Public == 0) && (e.noCounter == 13)){
-            campaignTrail_temp.questions_json[13] = tunnel(6961);   
+            e.questions_json[13] = tunnel(6961);   
         }
         else if((Cred == 4) && (Daschle == 0) && (Compromise == 1) && (Public == 0) && (e.noCounter == 13)){
-            campaignTrail_temp.questions_json[13] = tunnel(4000);   
+            e.questions_json[13] = tunnel(4000);   
         }
         else if((Cred >= 4) && (Daschle == 1) && (Compromise == 0) && (Public == 0) && (e.noCounter == 13)){
-            campaignTrail_temp.questions_json[13] = tunnel(6962);   
+            e.questions_json[13] = tunnel(6962);   
         }
         else if((Cred >= 4) && (Daschle == 0) && (Compromise == 0) && (Public == 0) && (e.noCounter == 13)){
-            campaignTrail_temp.questions_json[13] = tunnel(6962);   
+            e.questions_json[13] = tunnel(6962);   
         }
         else if((Cred < 4) && (Daschle == 1) && (Compromise == 0) && (Public == 0) && (e.noCounter == 13)){
-            campaignTrail_temp.questions_json[13] = tunnel(6960);   
+            e.questions_json[13] = tunnel(6960);   
         }
         else if((Cred < 3) && (Daschle == 0) && (Compromise == 0) && (Public == 0) && (e.noCounter == 13)){
-            campaignTrail_temp.questions_json[13] = tunnel(6959);   
+            e.questions_json[13] = tunnel(6959);   
         }
         else if((Cred >= 5) && (Daschle == 1) && (Compromise == 0) && (Public == 1) && (e.noCounter == 13)){
-            campaignTrail_temp.questions_json[13] = tunnel(6958);   
+            e.questions_json[13] = tunnel(6958);   
         }
         else if((Cred >= 5) && (Daschle == 0) && (Compromise == 0) && (Public == 1) && (e.noCounter == 13)){
-            campaignTrail_temp.questions_json[13] = tunnel(6958);   
+            e.questions_json[13] = tunnel(6958);   
         }
         else if((Cred < 5) && (Daschle == 1) && (Compromise == 0) && (Public == 1) && (e.noCounter == 13)){
-            campaignTrail_temp.questions_json[13] = tunnel(6957);   
+            e.questions_json[13] = tunnel(6957);   
         }
         else if((Cred < 5) && (Daschle == 0) && (Compromise == 0) && (Public == 1) && (e.noCounter == 13)){
-            campaignTrail_temp.questions_json[13] = tunnel(6957);   
+            e.questions_json[13] = tunnel(6957);   
         }
 
         if((Neolib == 1) && (Wins > 2) && (Healthcare == 1) && (e.noCounter == 14)){
-            campaignTrail_temp.questions_json[14] = tunnel(4001);
+            e.questions_json[14] = tunnel(4001);
         }
         else if((Socdem == 1) && (Wins > 2) && (Healthcare == 1) && (e.noCounter == 14)){
-            campaignTrail_temp.questions_json[14] = tunnel(6956);
+            e.questions_json[14] = tunnel(6956);
         }
         else if((Healthcare == 0) && (e.noCounter == 14)){
-            campaignTrail_temp.questions_json[14] = tunnel(6955);
+            e.questions_json[14] = tunnel(6955);
 			pictureDict[14] = "https://imgur.com/8xqwAws.png";
         }
         else if((Socdem == 1) && (Wins < 3) && (Healthcare == 1) && (e.noCounter == 14)){
-            campaignTrail_temp.questions_json[14] = tunnel(6954);
+            e.questions_json[14] = tunnel(6954);
 			pictureDict[14] = "https://imgur.com/zzDMqwu.png";
         }
         else if((Neolib == 1) && (Wins < 3) && (Healthcare == 1) && (e.noCounter == 14)){
-            campaignTrail_temp.questions_json[14] = tunnel(6953);
+            e.questions_json[14] = tunnel(6953);
 			pictureDict[14] = "https://imgur.com/zzDMqwu.png";
         }
 
         if((Neolib == 1) && (Cred <= 5) && (Kagan == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(4002);
+            e.questions_json[16] = tunnel(4002);
         }
         else if((Neolib == 1) && (Cred <= 5) && (Garland == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6952);
+            e.questions_json[16] = tunnel(6952);
         }
         else if((Neolib == 1) && (Cred <= 5) && (Sotomayor == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6951);
+            e.questions_json[16] = tunnel(6951);
         }
         else if((Neolib == 1) && (Cred <= 5) && (Napolitano == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6950);
+            e.questions_json[16] = tunnel(6950);
         }
         else if((Neolib == 1) && (Cred > 5) && (Kagan == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6949);
+            e.questions_json[16] = tunnel(6949);
         }
         else if((Neolib == 1) && (Cred > 5) && (Napolitano == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6948);
+            e.questions_json[16] = tunnel(6948);
         }
         else if((Neolib == 1) && (Cred > 5) && (Garland == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6947);
+            e.questions_json[16] = tunnel(6947);
         }
         else if((Neolib == 1) && (Cred > 5) && (Sotomayor == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6946);
+            e.questions_json[16] = tunnel(6946);
         }
         else if((Socdem == 1) && (Cred <= 5) && (Kagan == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6945);
+            e.questions_json[16] = tunnel(6945);
         }
         else if((Socdem == 1) && (Cred <= 5) && (Wood == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6944);
+            e.questions_json[16] = tunnel(6944);
         }
         else if((Socdem == 1) && (Cred <= 5) && (Garland == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6943);
+            e.questions_json[16] = tunnel(6943);
         }
         else if((Socdem == 1) && (Cred <= 5) && (Sotomayor == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6942);
+            e.questions_json[16] = tunnel(6942);
         }
         else if((Socdem == 1) && (Cred > 5) && (Kagan == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6941);
+            e.questions_json[16] = tunnel(6941);
         }
         else if((Socdem == 1) && (Cred > 5) && (Wood == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6940);
+            e.questions_json[16] = tunnel(6940);
         }
         else if((Socdem == 1) && (Cred > 5) && (Garland == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6939);
+            e.questions_json[16] = tunnel(6939);
         }
         else if((Socdem == 1) && (Cred > 5) && (Sotomayor == 1) && (e.noCounter == 16)){
-            campaignTrail_temp.questions_json[16] = tunnel(6938);
+            e.questions_json[16] = tunnel(6938);
         }
 
         if((Socdem == 1) && (Cred >= 6) && (e.player_answers.includes(8999) && e.player_answers.includes(8938)) && (e.noCounter == 18)){//Manning
-            campaignTrail_temp.questions_json[18] = tunnel(6931);
+            e.questions_json[18] = tunnel(6931);
             switcheroo13();
         }
         else if((Neolib == 1) && (Cred >= 6) && (e.player_answers.includes(8999) && e.player_answers.includes(8938)) && (e.noCounter == 18)){//Manning
-            campaignTrail_temp.questions_json[18] = tunnel(6930);
+            e.questions_json[18] = tunnel(6930);
             switcheroo13();
         }
         else if((Neolib == 1) && (Cred >= 6) && (e.noCounter == 18)){//Cenk
-            campaignTrail_temp.questions_json[18] = tunnel(6935);
+            e.questions_json[18] = tunnel(6935);
             switcheroo14();
         }
         else if((Neolib == 1) && (Cred < 6) && (Huntsman == 1) && (e.player_answers.includes(8980) || e.player_answers.includes(8984)) && (e.noCounter == 18)){//Cenk
-            campaignTrail_temp.questions_json[18] = tunnel(6935);
+            e.questions_json[18] = tunnel(6935);
             switcheroo14();
         }
         else if((Socdem == 1) && (Cred >= 6) && (e.noCounter == 18)){//Matthews
-            campaignTrail_temp.questions_json[18] = tunnel(6934);
+            e.questions_json[18] = tunnel(6934);
             switcheroo18();
         }
         else if((Socdem == 1) && (Cred < 4) && (e.noCounter == 18)){//Lieberman
-            campaignTrail_temp.questions_json[18] = tunnel(6933);
+            e.questions_json[18] = tunnel(6933);
             switcheroo19();
         }
         else if((Neolib == 1) && (Cred < 4) && (e.noCounter == 18)){//Kucinich
-            campaignTrail_temp.questions_json[18] = tunnel(6932);
+            e.questions_json[18] = tunnel(6932);
             switcheroo16();
         }
         else if((Socdem == 1) && (Cred < 6) && (e.noCounter == 18)){//Barr
-            campaignTrail_temp.questions_json[18] = tunnel(6937);
+            e.questions_json[18] = tunnel(6937);
             switcheroo15();
         }
         else if((Neolib == 1) && (Cred < 6) && (e.noCounter == 18)){//Barr
-            campaignTrail_temp.questions_json[18] = tunnel(4004);
+            e.questions_json[18] = tunnel(4004);
             switcheroo15();
         }
 
         if((Socdem == 1) && (Cred >= 6) && (Wood == 1) && (Sears == 1) && (e.player_answers.includes(8994) || e.player_answers.includes(8980) || e.player_answers.includes(8984)) && (e.player_answers.includes(9098)) && (e.noCounter == 19)){
-            campaignTrail_temp.questions_json[19] = tunnel(4005);
+            e.questions_json[19] = tunnel(4005);
 			pictureDict[19] = "https://imgur.com/AT7IQFC.png";
         }
         else if((Neolib == 1) && (Cred < 6) && (e.noCounter == 19)){
-            campaignTrail_temp.questions_json[19] = tunnel(4006);
+            e.questions_json[19] = tunnel(4006);
         }
         else if((Socdem == 1) && (Cred < 6) && (e.noCounter == 19)){
-            campaignTrail_temp.questions_json[19] = tunnel(4006);
+            e.questions_json[19] = tunnel(4006);
         }
         else if((Socdem == 1) && (Cred >= 6) && (e.noCounter == 19)){
-            campaignTrail_temp.questions_json[19] = tunnel(4006);
+            e.questions_json[19] = tunnel(4006);
         }
         else if((Neolib == 1) && (Cred >= 6) && (e.noCounter == 19)){
-            campaignTrail_temp.questions_json[19] = tunnel(6926);
+            e.questions_json[19] = tunnel(6926);
 			pictureDict[19] = "https://imgur.com/BFRDJVv.png";
         }
 
         if((Midterms == 1) && (e.noCounter == 20)){
-            campaignTrail_temp.questions_json[20] = tunnel(6835);
+            e.questions_json[20] = tunnel(6835);
 			pictureDict[20] = "https://imgur.com/peEPJt8.png";
         }
         else if((Midterms == 0) && (e.noCounter == 20)){
-            campaignTrail_temp.questions_json[20] = tunnel(4007);
+            e.questions_json[20] = tunnel(4007);
         }
 
         if((e.player_answers.includes(9122)) && (e.noCounter == 21)){
-            campaignTrail_temp.questions_json[21] = tunnel(6925);
+            e.questions_json[21] = tunnel(6925);
         }
 
         if((Neolib == 1) && (e.noCounter == 22)){
-            campaignTrail_temp.questions_json[22] = tunnel(4009);
+            e.questions_json[22] = tunnel(4009);
 			pictureDict[22] = "https://imgur.com/G7zxnD7.png";
         }
         else if((Socdem == 1) && (e.noCounter == 22)){
-            campaignTrail_temp.questions_json[22] = tunnel(6924);
+            e.questions_json[22] = tunnel(6924);
 			pictureDict[22] = "https://imgur.com/cVnEd9C.png";
         }
 
         if((e.player_answers.includes(9142)) && (e.noCounter == 23)){
-            campaignTrail_temp.questions_json[23] = tunnel(6923);
+            e.questions_json[23] = tunnel(6923);
 			pictureDict[23] = "https://imgur.com/U15nANn.png";
         }
         else if((e.player_answers.includes(9146)) && (e.noCounter == 23)){
-            campaignTrail_temp.questions_json[23] = tunnel(6922);
+            e.questions_json[23] = tunnel(6922);
 			pictureDict[23] = "https://imgur.com/GBgBI5V.png";
         }
         else if((e.player_answers.includes(9144)) && (e.noCounter == 23)){
-            campaignTrail_temp.questions_json[23] = tunnel(4010);
+            e.questions_json[23] = tunnel(4010);
 			pictureDict[23] = "https://imgur.com/GBgBI5V.png";
         }
         else if((e.player_answers.includes(9145)) && (e.noCounter == 23)){
-            campaignTrail_temp.questions_json[23] = tunnel(6921);
+            e.questions_json[23] = tunnel(6921);
 			pictureDict[23] = "https://imgur.com/jHb7xWi.png";
         }
         else if((e.player_answers.includes(9141)) && (e.noCounter == 23)){
-            campaignTrail_temp.questions_json[23] = tunnel(6920);
+            e.questions_json[23] = tunnel(6920);
 			pictureDict[23] = "https://imgur.com/7cafJ1i.png";
         }
         else if((e.player_answers.includes(9143)) && (e.noCounter == 23)){
-            campaignTrail_temp.questions_json[23] = tunnel(6919);
+            e.questions_json[23] = tunnel(6919);
 			pictureDict[23] = "https://imgur.com/7cafJ1i.png";
         }
 
@@ -35492,31 +35492,31 @@ const ads = [
         }
 
         if((e.player_answers.includes(8936)) && (Wins >= 3) && (e.noCounter == 24)){
-            campaignTrail_temp.questions_json[24] = tunnel(6918);
+            e.questions_json[24] = tunnel(6918);
         }
         else if((e.player_answers.includes(8936)) && (Wins < 3) && (e.noCounter == 24)){
-            campaignTrail_temp.questions_json[24] = tunnel(4011);
+            e.questions_json[24] = tunnel(4011);
         }
         else if((Wins >= 2) && (e.noCounter == 24)){
-            campaignTrail_temp.questions_json[24] = tunnel(6918);
+            e.questions_json[24] = tunnel(6918);
         }
         else if((Wins < 2) && (e.noCounter == 24)){
-            campaignTrail_temp.questions_json[24] = tunnel(4011);
+            e.questions_json[24] = tunnel(4011);
         }
 
         if((e.player_answers.includes(9158)) && (e.noCounter == 25)){
-            campaignTrail_temp.questions_json[25] = tunnel(4012);
+            e.questions_json[25] = tunnel(4012);
         }
         else if((e.player_answers.includes(9160)) && (Chauvinism == 1) && (e.noCounter == 25)){
-            campaignTrail_temp.questions_json[25] = tunnel(6917);
+            e.questions_json[25] = tunnel(6917);
 			pictureDict[25] = "https://imgur.com/bz4lAvO.png";
         }
         else if((e.player_answers.includes(9160)) && (Chauvinism < 1) && (e.noCounter == 25)){
-            campaignTrail_temp.questions_json[25] = tunnel(6916);
+            e.questions_json[25] = tunnel(6916);
 			pictureDict[25] = "https://imgur.com/bz4lAvO.png";
         }
         else if((e.player_answers.includes(9159) || e.player_answers.includes(9161)) && (e.noCounter == 25)){
-            campaignTrail_temp.questions_json[25] = tunnel(6915);
+            e.questions_json[25] = tunnel(6915);
 			pictureDict[25] = "https://imgur.com/h8Ks9BR.png";
         }
 
@@ -35525,69 +35525,69 @@ const ads = [
         }
 
         if(ans == 9164){
-            campaignTrail_temp.running_mate_image_url="https://i.imgur.com/C4NYJ46.png"
+            e.running_mate_image_url="https://i.imgur.com/C4NYJ46.png"
             vpTable["Barack Obama"] = "Hillary Clinton";
                         e.VPisCandidate += 1;
         }
 
         if((e.VPisCandidate == 0) && (e.noCounter == 26)){
-            campaignTrail_temp.questions_json[26] = tunnel(4013);
+            e.questions_json[26] = tunnel(4013);
         }
         else if((e.VPisCandidate == 1) && (e.noCounter == 26)){
-            campaignTrail_temp.questions_json[26] = tunnel(6914);
+            e.questions_json[26] = tunnel(6914);
         }
 
         if((e.player_answers.includes(9151) || e.player_answers.includes(9149) || e.player_answers.includes(9153)) && (e.player_answers.includes(8998)) && (e.noCounter == 27)){
-            campaignTrail_temp.questions_json[27] = tunnel(4014);
+            e.questions_json[27] = tunnel(4014);
         }
         else if((e.player_answers.includes(9151) || e.player_answers.includes(9149) || e.player_answers.includes(9153)) && (e.player_answers.includes(8999) || e.player_answers.includes(9000)) && (e.noCounter == 27)){
-            campaignTrail_temp.questions_json[27] = tunnel(6913);
+            e.questions_json[27] = tunnel(6913);
 			pictureDict[27] = "https://imgur.com/rfd3mUi.png";
         }
         else if((e.player_answers.includes(9152) || e.player_answers.includes(9150)) && (e.noCounter == 27)){
-            campaignTrail_temp.questions_json[27] = tunnel(6912);
+            e.questions_json[27] = tunnel(6912);
 			pictureDict[27] = "https://imgur.com/1UfVd8f.png";
         }
         else if((e.player_answers.includes(9155) || e.player_answers.includes(9157)) && (e.noCounter == 27)){
-            campaignTrail_temp.questions_json[27] = tunnel(6911);
+            e.questions_json[27] = tunnel(6911);
 			pictureDict[27] = "https://imgur.com/qAAAz2s.png";
         }
         else if((e.player_answers.includes(9154) || e.player_answers.includes(9156)) && (e.noCounter == 27)){
-            campaignTrail_temp.questions_json[27] = tunnel(6910);
+            e.questions_json[27] = tunnel(6910);
 			pictureDict[27] = "https://imgur.com/NB0EG3F.png";
         }
         else if((e.player_answers.includes(9147)) && (e.noCounter == 27)){
-            campaignTrail_temp.questions_json[27] = tunnel(6909);
+            e.questions_json[27] = tunnel(6909);
 			pictureDict[27] = "https://imgur.com/NB0EG3F.png";
         }
         else if((e.player_answers.includes(9148)) && (e.noCounter == 27)){
-            campaignTrail_temp.questions_json[27] = tunnel(1234);
+            e.questions_json[27] = tunnel(1234);
 			pictureDict[27] = "https://imgur.com/yqA2igC.png";
         }
 
         if((Cred >= 4) && (e.noCounter == 28)){
-            campaignTrail_temp.questions_json[28] = tunnel(4015);
+            e.questions_json[28] = tunnel(4015);
         }
         else if((Cred < 4) && (e.player_answers.includes(9122) || e.player_answers.includes(9123) || e.player_answers.includes(9124) || e.player_answers.includes(9121)) && (e.noCounter == 28)){
-            campaignTrail_temp.questions_json[28] = tunnel(4015);
+            e.questions_json[28] = tunnel(4015);
         }
         else if((Cred < 4) && (e.player_answers.includes(8994)) && (e.player_answers.includes(8995) || e.player_answers.includes(9073)) && (e.noCounter == 28)){
-            campaignTrail_temp.questions_json[28] = tunnel(4015);
+            e.questions_json[28] = tunnel(4015);
         }
         else if((Cred < 4) && (e.player_answers.includes(8994)) && (e.noCounter == 28)){
-            campaignTrail_temp.questions_json[28] = tunnel(6908);
+            e.questions_json[28] = tunnel(6908);
 			pictureDict[28] = "https://imgur.com/BOY3Ngj.png";
         }
         else if((Cred < 4) && (e.player_answers.includes(8925) && e.player_answers.includes(8927)) && (e.noCounter == 28)){
-            campaignTrail_temp.questions_json[28] = tunnel(6907);
+            e.questions_json[28] = tunnel(6907);
 			pictureDict[28] = "https://imgur.com/BOY3Ngj.png";
         }
         else if((Cred < 4) && (e.player_answers.includes(8986)) && (e.noCounter == 28)){
-            campaignTrail_temp.questions_json[28] = tunnel(6906);
+            e.questions_json[28] = tunnel(6906);
 			pictureDict[28] = "https://imgur.com/BOY3Ngj.png";
         }
         else if((Cred < 4) && (e.noCounter == 28)){
-            campaignTrail_temp.questions_json[28] = tunnel(6905);
+            e.questions_json[28] = tunnel(6905);
 			pictureDict[28] = "https://imgur.com/BOY3Ngj.png";
         }
 
@@ -35597,31 +35597,31 @@ const ads = [
         }
 
         if((e.player_answers.includes(8972)) && (e.noCounter == 29)){
-            campaignTrail_temp.questions_json[29] = tunnel(6904);
+            e.questions_json[29] = tunnel(6904);
         }
         else if((e.noCounter == 29)){
-            campaignTrail_temp.questions_json[29] = tunnel(4016);
+            e.questions_json[29] = tunnel(4016);
         }
 
         if((e.player_answers.includes(8994) || e.player_answers.includes(8980) || e.player_answers.includes(8984)) && (e.player_answers.includes(8999)) && (e.player_answers.includes(9122) || e.player_answers.includes(9123) || e.player_answers.includes(9124) || e.player_answers.includes(9121) || (Sotomayor == 1) && (Napolitano == 1) && e.player_answers.includes(9175) || e.player_answers.includes(9109) && (Kagan == 1) && e.player_answers.includes(9125) && e.player_answers.includes(9137)|| e.player_answers.includes(9117) && (Kagan == 1) && e.player_answers.includes(9125) && e.player_answers.includes(9137)) && (e.player_answers.includes(9159) || e.player_answers.includes(9161)) && (Wins >= 4) && (e.noCounter == 30)){
-            campaignTrail_temp.questions_json[30] = tunnel(6900);
+            e.questions_json[30] = tunnel(6900);
 			pictureDict[30] = "https://imgur.com/VNQYsIq.png";
         }
         else if((e.player_answers.includes(8979) || e.player_answers.includes(8981) || e.player_answers.includes(8983) || e.player_answers.includes(8988) || e.player_answers.includes(8991)) && (e.player_answers.includes(9158)) && (e.noCounter == 30)){
-            campaignTrail_temp.questions_json[30] = tunnel(6903);
+            e.questions_json[30] = tunnel(6903);
         }
         else if((e.player_answers.includes(8980) || e.player_answers.includes(8984) || e.player_answers.includes(8994)) && (e.player_answers.includes(9158) || e.player_answers.includes(9159) || e.player_answers.includes(9161)) && (e.noCounter == 30)){
-            campaignTrail_temp.questions_json[30] = tunnel(6902);
+            e.questions_json[30] = tunnel(6902);
         }
         else if((e.player_answers.includes(8980) || e.player_answers.includes(8984) || e.player_answers.includes(8994) || e.player_answers.includes(8979) || e.player_answers.includes(8981) || e.player_answers.includes(8983) || e.player_answers.includes(8988) || e.player_answers.includes(8991)) && (e.player_answers.includes(9160)) && (e.noCounter == 30)){
-            campaignTrail_temp.questions_json[30] = tunnel(6901);
+            e.questions_json[30] = tunnel(6901);
         }
         else if((Healthcare == 0) && (e.noCounter == 30)){
-            campaignTrail_temp.questions_json[30] = tunnel(4017);
+            e.questions_json[30] = tunnel(4017);
         }
 
         if((e.player_answers.includes(9017)) && (e.player_answers.includes(9162)) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6895);
+            e.questions_json[31] = tunnel(6895);
             switcheroo7();
             Rep += 7;
 			pictureDict[31] = "https://imgur.com/qm5EgUg.png";
@@ -35630,7 +35630,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/AiXsyzM.png";
         }
         else if((e.player_answers.includes(9221)) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6885);
+            e.questions_json[31] = tunnel(6885);
             switcheroo6();
             Rep += 6;
 			pictureDict[31] = "https://imgur.com/rQEE7ui.png";
@@ -35639,7 +35639,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/cUMs9UF.png";
         }
         else if((Neolib == 1) && (e.player_answers.includes(8942)) && (e.player_answers.includes(9153) || e.player_answers.includes(9149) || e.player_answers.includes(9151)) && (Cred < 4) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6887);
+            e.questions_json[31] = tunnel(6887);
             switcheroo26();
             Rep += 26;
 			pictureDict[31] = "https://imgur.com/BdZ6EYq.png";
@@ -35648,7 +35648,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/iMrn82q.png";
         }
         else if((Socdem == 1) && (e.player_answers.includes(8942)) && (e.player_answers.includes(9147)) && (Cred < 4) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6886);
+            e.questions_json[31] = tunnel(6886);
             switcheroo26();
             Rep += 26;
 			pictureDict[31] = "https://imgur.com/BdZ6EYq.png";
@@ -35657,7 +35657,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/iMrn82q.png";
         }
         else if((e.player_answers.includes(9173) || e.player_answers.includes(9174) || e.player_answers.includes(9179)) && (e.player_answers.includes(9187) || e.player_answers.includes(9190) || e.player_answers.includes(9193) || e.player_answers.includes(9196)) && (Cred < 5) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6892);
+            e.questions_json[31] = tunnel(6892);
             switcheroo1();
             Rep += 1;
 			pictureDict[31] = "https://imgur.com/cgq9KUQ.png";
@@ -35666,7 +35666,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/CBuLfIk.png";
         }
         else if((e.player_answers.includes(8972) && e.player_answers.includes(9203)) && (e.player_answers.includes(9162)) && (Cred < 6) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6896);
+            e.questions_json[31] = tunnel(6896);
             switcheroo2();
             Rep += 2;
 			pictureDict[31] = "https://imgur.com/5Oym94K.png";
@@ -35675,7 +35675,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/C0KXHww.png";
         }
         else if((e.player_answers.includes(9131)) && (e.player_answers.includes(9178) || e.player_answers.includes(9179) || e.player_answers.includes(9180) || e.player_answers.includes(9181)) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6888);
+            e.questions_json[31] = tunnel(6888);
             switcheroo21();
             Rep += 21;
 			pictureDict[31] = "https://imgur.com/2vyFMrM.png";
@@ -35684,7 +35684,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/1wH0JjH.png";
         }
         else if((e.player_answers.includes(8926) && e.player_answers.includes(8929)) && (e.player_answers.includes(8994) || e.player_answers.includes(8980) || e.player_answers.includes(8984)) && (e.player_answers.includes(9086) || e.player_answers.includes(9088) || e.player_answers.includes(9090) || e.player_answers.includes(9096) || e.player_answers.includes(9099) || e.player_answers.includes(9102) || e.player_answers.includes(9105) || e.player_answers.includes(9107)) && (e.player_answers.includes(9160)) && (e.player_answers.includes(9175) || e.player_answers.includes(9176) || e.player_answers.includes(9182)) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6893);
+            e.questions_json[31] = tunnel(6893);
             switcheroo20();
             Rep += 20;
 			pictureDict[31] = "https://imgur.com/o6HqZpf.png";
@@ -35693,7 +35693,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/i8zCd9b.png";
         }
         else if((Cred > 8) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6879);
+            e.questions_json[31] = tunnel(6879);
             switcheroo24();
             Rep += 24;
 			pictureDict[31] = "https://imgur.com/AIdT59D.png";
@@ -35702,7 +35702,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/ZmhZ3eT.png";
         }
         else if((e.player_answers.includes(8936)) && (e.player_answers.includes(9084)) && (Cred < 4) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6881);
+            e.questions_json[31] = tunnel(6881);
             switcheroo3();
             Rep += 3;
 			pictureDict[31] = "https://imgur.com/q3zVCi5.png";
@@ -35711,7 +35711,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/TMVCFo2.png";
         }
         else if((e.player_answers.includes(9084)) && (Cred < 4) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6880);
+            e.questions_json[31] = tunnel(6880);
             switcheroo3();
             Rep += 3;
 			pictureDict[31] = "https://imgur.com/q3zVCi5.png";
@@ -35720,7 +35720,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/TMVCFo2.png";
         }
         else if((e.player_answers.includes(9085) && e.player_answers.includes(9122)) && (Cred < 4) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6869);
+            e.questions_json[31] = tunnel(6869);
             switcheroo4();
             Rep += 4;
 			pictureDict[31] = "https://imgur.com/KEbEiaj.png";
@@ -35729,7 +35729,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/0R0gJ40.png";
         }
         else if((e.player_answers.includes(9085)) && (Cred < 4) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6870);
+            e.questions_json[31] = tunnel(6870);
             switcheroo4();
             Rep += 4;
 			pictureDict[31] = "https://imgur.com/KEbEiaj.png";
@@ -35738,7 +35738,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/0R0gJ40.png";
         }
         else if((e.player_answers.includes(9166)) && (Cred >= 4) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6899);
+            e.questions_json[31] = tunnel(6899);
             switcheroo5();
             Rep += 5;
 			pictureDict[31] = "https://imgur.com/J8AcWxq.png";
@@ -35747,7 +35747,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/NoGj8Ek.png";
         }
         else if((e.player_answers.includes(8965)) && (Cred >= 4) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6891);
+            e.questions_json[31] = tunnel(6891);
             switcheroo22();
             Rep += 22;
 			pictureDict[31] = "https://imgur.com/VyTrYTy.png";
@@ -35756,7 +35756,7 @@ const ads = [
 			pictureDict[36] = "https://imgur.com/bQ5AsJ9.png";
         }
         else if((e.player_answers.includes(8964)) && (Cred >= 4) && (e.noCounter == 31)){
-            campaignTrail_temp.questions_json[31] = tunnel(6890);
+            e.questions_json[31] = tunnel(6890);
             switcheroo25();
             Rep += 25;
 			pictureDict[31] = "https://imgur.com/MU8yQrY.png";
@@ -35766,226 +35766,226 @@ const ads = [
         }
 
         if((Wins < 1) && (e.noCounter == 32)){
-            campaignTrail_temp.questions_json[32] = tunnel(4019);
+            e.questions_json[32] = tunnel(4019);
         }
         else if((Wins > 3) && (e.noCounter == 32)){
-            campaignTrail_temp.questions_json[32] = tunnel(6897);
+            e.questions_json[32] = tunnel(6897);
         }
         else if((Wins > 1) && (e.noCounter == 32)){
-            campaignTrail_temp.questions_json[32] = tunnel(6898);
+            e.questions_json[32] = tunnel(6898);
         }
 
         if((Rep == 5) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6894);
+            e.questions_json[33] = tunnel(6894);
         }
         else if((Rep == 2) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6889);
+            e.questions_json[33] = tunnel(6889);
         }
         else if((Rep == 6) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6884);
+            e.questions_json[33] = tunnel(6884);
         }
         else if((Rep == 1) && (e.player_answers.includes(9179)) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6883);
+            e.questions_json[33] = tunnel(6883);
         }
         else if((Rep == 1) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6882);
+            e.questions_json[33] = tunnel(6882);
         }
         else if((Rep == 7) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6878);
+            e.questions_json[33] = tunnel(6878);
         }
         else if((Rep == 20) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6877);
+            e.questions_json[33] = tunnel(6877);
         }
         else if((Rep == 4) && (e.player_answers.includes(9331)) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6865);
+            e.questions_json[33] = tunnel(6865);
 			pictureDict[33] = "https://imgur.com/pWSBg5L.png";
         }
         else if((Rep == 4) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6866);
+            e.questions_json[33] = tunnel(6866);
         }
         else if((Rep == 24) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6858);
+            e.questions_json[33] = tunnel(6858);
         }
         else if((Rep == 25) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6857);
+            e.questions_json[33] = tunnel(6857);
         }
         else if((Rep == 26) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6850);
+            e.questions_json[33] = tunnel(6850);
         }
         else if((Rep == 22) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6848);
+            e.questions_json[33] = tunnel(6848);
         }
         else if((Rep == 21) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6840);
+            e.questions_json[33] = tunnel(6840);
         }
         else if((Rep == 3) && (e.noCounter == 33)){
-            campaignTrail_temp.questions_json[33] = tunnel(6836);
+            e.questions_json[33] = tunnel(6836);
         }
 
         if((e.player_answers.includes(9179)) && (e.noCounter == 34)){
-            campaignTrail_temp.questions_json[34] = tunnel(6873);
+            e.questions_json[34] = tunnel(6873);
 			pictureDict[34] = "https://imgur.com/9yT8g6k.png";
         }
         else if((e.player_answers.includes(9175) || e.player_answers.includes(9176)) && (e.noCounter == 34)){
-            campaignTrail_temp.questions_json[34] = tunnel(4021);
+            e.questions_json[34] = tunnel(4021);
         }
         else if((e.player_answers.includes(9182)) && (e.noCounter == 34)){
-            campaignTrail_temp.questions_json[34] = tunnel(6876);
+            e.questions_json[34] = tunnel(6876);
 			pictureDict[34] = "https://imgur.com/r7s1fkN.png";
         }
         else if((e.player_answers.includes(9180) || e.player_answers.includes(9181) || e.player_answers.includes(9183)) && (e.noCounter == 34)){
-            campaignTrail_temp.questions_json[34] = tunnel(6875);
+            e.questions_json[34] = tunnel(6875);
 			pictureDict[34] = "https://imgur.com/FwEbcVi.png";
         }
         else if((e.player_answers.includes(9178)) && (e.noCounter == 34)){
-            campaignTrail_temp.questions_json[34] = tunnel(6874);
+            e.questions_json[34] = tunnel(6874);
 			pictureDict[34] = "https://imgur.com/FwEbcVi.png";
         }
         else if((e.player_answers.includes(9173) || e.player_answers.includes(9174)) && (e.noCounter == 34)){
-            campaignTrail_temp.questions_json[34] = tunnel(6872);
+            e.questions_json[34] = tunnel(6872);
 			pictureDict[34] = "https://imgur.com/sDr0plG.png";
         }
         else if((e.player_answers.includes(9177)) && (e.noCounter == 34)){
-            campaignTrail_temp.questions_json[34] = tunnel(6871);
+            e.questions_json[34] = tunnel(6871);
 			pictureDict[34] = "https://imgur.com/yiw7aGs.png";
         }
         else if((e.player_answers.includes(9503)) && (e.noCounter == 34)){
-            campaignTrail_temp.questions_json[34] = tunnel(1235);
+            e.questions_json[34] = tunnel(1235);
 			pictureDict[34] = "https://imgur.com/U15nANn.png";
         }
 
         if((Rep == 5) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6868);
+            e.questions_json[35] = tunnel(6868);
         }
         else if((Rep == 20) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6867);
+            e.questions_json[35] = tunnel(6867);
         }
         else if((Rep == 24) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6828);
+            e.questions_json[35] = tunnel(6828);
         }
         else if((Rep == 1) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6859);
+            e.questions_json[35] = tunnel(6859);
         }
         else if((Rep == 3) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6831);
+            e.questions_json[35] = tunnel(6831);
         }
         else if((Rep == 7) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6854);
+            e.questions_json[35] = tunnel(6854);
         }
         else if((Rep == 4) && (e.player_answers.includes(9331)) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6856);
+            e.questions_json[35] = tunnel(6856);
         }
         else if((Rep == 4) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6852);
+            e.questions_json[35] = tunnel(6852);
         }
         else if((Rep == 25) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6845);
+            e.questions_json[35] = tunnel(6845);
         }
         else if((Rep == 2) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6834);
+            e.questions_json[35] = tunnel(6834);
         }
         else if((Rep == 21) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6832);
+            e.questions_json[35] = tunnel(6832);
         }
         else if((Rep == 6) && (e.player_answers.includes(9018) && e.player_answers.includes(9286)) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6847);
+            e.questions_json[35] = tunnel(6847);
 			pictureDict[35] = "https://imgur.com/7u950x2.png";
         }
         else if((Rep == 6) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6822);
+            e.questions_json[35] = tunnel(6822);
         }
         else if((Rep == 26) && (e.player_answers.includes(9147)) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6844);
+            e.questions_json[35] = tunnel(6844);
 			pictureDict[35] = "https://imgur.com/J4HVwVz.png";
         }
         else if((Rep == 26) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6826);
+            e.questions_json[35] = tunnel(6826);
         }
         else if((Rep == 22) && (Neolib == 1||e.player_answers.includes(9187)||e.player_answers.includes(9188)||e.player_answers.includes(9189)||e.player_answers.includes(9190)||e.player_answers.includes(9191)||e.player_answers.includes(9192)||e.player_answers.includes(9193)||e.player_answers.includes(9194)||e.player_answers.includes(9195)||e.player_answers.includes(9196)||e.player_answers.includes(9197)||e.player_answers.includes(9198)) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6839);
+            e.questions_json[35] = tunnel(6839);
         }
         else if((Rep == 22) && (Socdem == 1) && (e.player_answers.includes(9184)||e.player_answers.includes(9185)||e.player_answers.includes(9186)) && (e.noCounter == 35)){
-            campaignTrail_temp.questions_json[35] = tunnel(6838);
+            e.questions_json[35] = tunnel(6838);
         }
 
         if((Rep == 20) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6864);
+            e.questions_json[36] = tunnel(6864);
         }
         else if((Rep == 5) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6863);
+            e.questions_json[36] = tunnel(6863);
         }
         else if((Rep == 3) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6830);
+            e.questions_json[36] = tunnel(6830);
         }
         else if((Rep == 21) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6829);
+            e.questions_json[36] = tunnel(6829);
         }
         else if((Rep == 24) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6827);
+            e.questions_json[36] = tunnel(6827);
         }
         else if((Rep == 26) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6825);
+            e.questions_json[36] = tunnel(6825);
         }
         else if((Rep == 7) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6853);
+            e.questions_json[36] = tunnel(6853);
         }
         else if((Rep == 4) && (e.player_answers.includes(9343) && e.player_answers.includes(9382)) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6855);
+            e.questions_json[36] = tunnel(6855);
 			pictureDict[36] = "https://imgur.com/y1cI717.png";
         }
         else if((Rep == 4) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6851);
+            e.questions_json[36] = tunnel(6851);
         }
         else if((Rep == 1) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6843);
+            e.questions_json[36] = tunnel(6843);
         }
         else if((Rep == 25) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6841);
+            e.questions_json[36] = tunnel(6841);
         }
         else if((Rep == 22) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6837);
+            e.questions_json[36] = tunnel(6837);
         }
         else if((Rep == 2) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6833);
+            e.questions_json[36] = tunnel(6833);
         }
         else if((Rep == 6) && (e.player_answers.includes(9413)) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6846);
+            e.questions_json[36] = tunnel(6846);
 			pictureDict[36] = "https://imgur.com/e4QchUb.png";
         }
         else if((Rep == 6) && (e.noCounter == 36)){
-            campaignTrail_temp.questions_json[36] = tunnel(6821);
+            e.questions_json[36] = tunnel(6821);
         }
 
         if((Rep == 7) && (e.noCounter == 37)){
-            campaignTrail_temp.questions_json[37] = tunnel(6849);
+            e.questions_json[37] = tunnel(6849);
         }
         else if((e.VPisCandidate == 0) && (Cred < 8) && (e.noCounter == 37)){
-            campaignTrail_temp.questions_json[37] = tunnel(4023);
+            e.questions_json[37] = tunnel(4023);
         }
         else if((e.VPisCandidate == 0) && (Cred > 8) && (e.noCounter == 37)){
-            campaignTrail_temp.questions_json[37] = tunnel(6862);
+            e.questions_json[37] = tunnel(6862);
         }
         else if((e.VPisCandidate == 1) && (Cred < 8) && (e.noCounter == 37)){
-            campaignTrail_temp.questions_json[37] = tunnel(6861);
+            e.questions_json[37] = tunnel(6861);
         }
         else if((e.VPisCandidate == 1) && (Cred > 8) && (e.noCounter == 37)){
-            campaignTrail_temp.questions_json[37] = tunnel(6860);
+            e.questions_json[37] = tunnel(6860);
         }
 
         if((Rep == 1) && (e.player_answers.includes(9000)) && (e.player_answers.includes(9158)) && (e.player_answers.includes(9289)) && (e.player_answers.includes(9321)) && (e.noCounter == 38)){
-            campaignTrail_temp.questions_json[38] = tunnel(6842);
+            e.questions_json[38] = tunnel(6842);
 			pictureDict[38] = "https://imgur.com/6Xg5G2R.png";
         }
         else if((e.VPisCandidate == 1) && (e.player_answers.includes(8980) || e.player_answers.includes(8984)) && (e.player_answers.includes(9125)) && (e.player_answers.includes(9170)) && (e.player_answers.includes(9175)) && (e.noCounter == 38)){
-            campaignTrail_temp.questions_json[38] = tunnel(6824);
+            e.questions_json[38] = tunnel(6824);
 			pictureDict[38] = "https://imgur.com/S6SjlDZ.png";
         }
         else if((e.VPisCandidate == 0) && (e.player_answers.includes(8925)) && (e.player_answers.includes(8927)) && (e.player_answers.includes(8936)) && (e.player_answers.includes(8994)) && (e.player_answers.includes(9122) || e.player_answers.includes(9123) || e.player_answers.includes(9124) || e.player_answers.includes(9121)) && (e.player_answers.includes(9168)) && (e.player_answers.includes(9318)) && (e.player_answers.includes(9184)||e.player_answers.includes(9185)||e.player_answers.includes(9186)) && (e.noCounter == 38)){
-            campaignTrail_temp.questions_json[38] = tunnel(6823);
+            e.questions_json[38] = tunnel(6823);
 			pictureDict[38] = "https://imgur.com/0E6YEdF.png";
         }
         else if((e.noCounter == 38)){
-            campaignTrail_temp.questions_json[38] = tunnel(4024);
+            e.questions_json[38] = tunnel(4024);
         }
 
         //achievements
@@ -38526,6 +38526,6 @@ function applyTooltipsToObject(obj) {
     }
 }
 
-applyTooltipsToObject(campaignTrail_temp.questions_json);
-applyTooltipsToObject(campaignTrail_temp.answers_json);
-applyTooltipsToObject(campaignTrail_temp.answer_feedback_json);
+applyTooltipsToObject(e.questions_json);
+applyTooltipsToObject(e.answers_json);
+applyTooltipsToObject(e.answer_feedback_json);
